@@ -68,7 +68,7 @@ namespace Confiture
             if(Double.TryParse(kg, out double result))
             {
                 if (result > 999)
-                    return Math.Round(result / 7 * 10) / 10;
+                    return Math.Round(result / 7 * 10);
                 else
                     return Math.Round(result / 7 * 10);
             }
@@ -77,23 +77,12 @@ namespace Confiture
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            MyResult();
-            /*if (_ConvertToConfiture == true)
+            if (_ConvertToConfiture == true)
             {
                 if(label2.Text == "0")
                     label2.Text = "Conversion impossible";
-
-                if (int.TryParse(this.textBox1.Text, out int Amount))
-                {
-                    if (Amount > 999)
-                    {
-                        label2.Text = ConvertToConfiture(textBox1.Text).ToString() + " kg";
-                    }
-                    else
-                    {
-                        label2.Text = ConvertToConfiture(textBox1.Text).ToString() + " g";
-                    }
-                }
+                else
+                    label2.Text = ConvertToSucre(textBox1.Text).ToString();
             }
 
             if (_ConvertToSucre == true)
@@ -102,14 +91,6 @@ namespace Confiture
                     label2.Text = "Conversion impossible";
                 else
                     label2.Text = ConvertToSucre(textBox1.Text).ToString();
-            }*/
-        }
-
-        private void MyResult()
-        {
-            if (Int32.TryParse(label2.Text, out int a))
-            {
-                label2.Text = ConvertToSucre(textBox1.Text).ToString() + " kg";
             }
         }
 
