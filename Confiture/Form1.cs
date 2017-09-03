@@ -44,12 +44,20 @@ namespace Confiture
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
+            if(label2.Text != "0")
+            {
+                label2.Text = ConvertToConfiture(textBox1.Text).ToString();
+            }
             _ConvertToConfiture = true;
             _ConvertToSucre = false;
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
+            if (label2.Text != "0")
+            {
+                label2.Text = ConvertToSucre(textBox1.Text).ToString();
+            }
             _ConvertToSucre = true;
             _ConvertToConfiture = false;
         }
@@ -65,12 +73,9 @@ namespace Confiture
 
         public static double ConvertToSucre(string kg)
         {
-            if(Double.TryParse(kg, out double result))
+            if (Double.TryParse(kg, out double result))
             {
-                if (result > 999)
-                    return Math.Round(result / 7 * 10);
-                else
-                    return Math.Round(result / 7 * 10);
+                return Math.Round(result / 7 * 10);
             }
             return 0;
         }
@@ -82,7 +87,7 @@ namespace Confiture
                 if(label2.Text == "0")
                     label2.Text = "Conversion impossible";
                 else
-                    label2.Text = ConvertToSucre(textBox1.Text).ToString();
+                    label2.Text = ConvertToConfiture(textBox1.Text).ToString();
             }
 
             if (_ConvertToSucre == true)
