@@ -99,5 +99,18 @@ namespace Confiture
             }
         }
 
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar != (Char)Keys.Back)
+            {
+                if(Char.IsControl(e.KeyChar) || !Char.IsNumber(e.KeyChar))
+                {
+                    e.Handled = true;
+                    return;
+                }
+                e.Handled = false;
+                return;
+            }
+        }
     }
 }
