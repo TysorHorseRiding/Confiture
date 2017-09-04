@@ -41,12 +41,6 @@ namespace Miseajour
             this.Close();
         }
 
-        private void btnNo_Click(object sender, EventArgs e)
-        {
-            this.DialogResult = DialogResult.No;
-            this.Close();
-        }
-
         private void btnDetails_Click(object sender, EventArgs e)
         {
             if (this.updateInfoForm == null)
