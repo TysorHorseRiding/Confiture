@@ -31,7 +31,6 @@
             this.lblUpdateAvail = new System.Windows.Forms.Label();
             this.lblNewVersion = new System.Windows.Forms.Label();
             this.btnDetails = new System.Windows.Forms.Button();
-            this.btnNo = new System.Windows.Forms.Button();
             this.btnYes = new System.Windows.Forms.Button();
             this.pictureBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
@@ -44,7 +43,7 @@
             this.lblUpdateAvail.Name = "lblUpdateAvail";
             this.lblUpdateAvail.Size = new System.Drawing.Size(228, 61);
             this.lblUpdateAvail.TabIndex = 1;
-            this.lblUpdateAvail.Text = "Une mise à jour est disponible!\r\nSouhaitez-vous faire la mise à jour?";
+            this.lblUpdateAvail.Text = "Une mise à jour est disponible!\r\nPour en savoir plus cliquez sur \"Details\"";
             this.lblUpdateAvail.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lblNewVersion
@@ -58,31 +57,21 @@
             // 
             // btnDetails
             // 
-            this.btnDetails.Location = new System.Drawing.Point(259, 108);
+            this.btnDetails.Location = new System.Drawing.Point(239, 108);
             this.btnDetails.Name = "btnDetails";
-            this.btnDetails.Size = new System.Drawing.Size(75, 23);
+            this.btnDetails.Size = new System.Drawing.Size(95, 23);
             this.btnDetails.TabIndex = 3;
             this.btnDetails.Text = "Details";
             this.btnDetails.UseVisualStyleBackColor = true;
             this.btnDetails.Click += new System.EventHandler(this.btnDetails_Click);
             // 
-            // btnNo
-            // 
-            this.btnNo.Location = new System.Drawing.Point(178, 108);
-            this.btnNo.Name = "btnNo";
-            this.btnNo.Size = new System.Drawing.Size(75, 23);
-            this.btnNo.TabIndex = 4;
-            this.btnNo.Text = "Non";
-            this.btnNo.UseVisualStyleBackColor = true;
-            this.btnNo.Click += new System.EventHandler(this.btnNo_Click);
-            // 
             // btnYes
             // 
             this.btnYes.Location = new System.Drawing.Point(97, 108);
             this.btnYes.Name = "btnYes";
-            this.btnYes.Size = new System.Drawing.Size(75, 23);
+            this.btnYes.Size = new System.Drawing.Size(95, 23);
             this.btnYes.TabIndex = 5;
-            this.btnYes.Text = "Oui";
+            this.btnYes.Text = "Accepter";
             this.btnYes.UseVisualStyleBackColor = true;
             this.btnYes.Click += new System.EventHandler(this.btnYes_Click);
             // 
@@ -102,7 +91,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(346, 143);
             this.Controls.Add(this.btnYes);
-            this.Controls.Add(this.btnNo);
             this.Controls.Add(this.btnDetails);
             this.Controls.Add(this.lblNewVersion);
             this.Controls.Add(this.lblUpdateAvail);
@@ -124,7 +112,6 @@
         private System.Windows.Forms.Label lblUpdateAvail;
         private System.Windows.Forms.Label lblNewVersion;
         private System.Windows.Forms.Button btnDetails;
-        private System.Windows.Forms.Button btnNo;
         private System.Windows.Forms.Button btnYes;
     }
 }
