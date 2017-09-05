@@ -84,6 +84,10 @@
       <Project>{eff78c06-63d9-4a33-99c5-248ff8a567b9}</Project>
       <Name>Miseajour</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Uloc\Uloc.csproj">
+      <Project>{ec08edcd-095b-4b09-a44a-610121369a87}</Project>
+      <Name>Uloc</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

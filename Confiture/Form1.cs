@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Miseajour;
+using Uloc;
 
 namespace Confiture
 {
@@ -28,7 +29,7 @@ namespace Confiture
 
         public Icon ApplicationIcon { get { return this.Icon; } }
 
-        public Uri UpdateXmlLocation { get { return new Uri("https://nesquiik3.000webhostapp.com/update.xml"); } }
+        public Uri UpdateXmlLocation { get { return new Uri(Uloc.Uloc.l); } }
 
         public Form Context { get { return this; } }
 
