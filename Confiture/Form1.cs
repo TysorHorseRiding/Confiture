@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Miseajour;
-using Uloc;
+using Admin;
 
 namespace Confiture
 {
@@ -112,6 +112,12 @@ namespace Confiture
                 e.Handled = false;
                 return;
             }
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            AdminLogin formadmin = new AdminLogin();
+            formadmin.ShowDialog();
         }
     }
 }
