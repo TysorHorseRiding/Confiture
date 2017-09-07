@@ -42,6 +42,8 @@ namespace Admin
                     if (count == 1)
                     {
                         MessageBox.Show("Connecté !");
+                        AdminEditForm adminedit = new AdminEditForm();
+                        adminedit.ShowDialog();
                     }
                     else
                     {
